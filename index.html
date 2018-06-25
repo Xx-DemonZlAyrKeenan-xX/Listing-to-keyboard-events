@@ -1,0 +1,33 @@
+<html>
+<head>
+
+<style>
+     #box { width: 100px; height: 100px; position: absolute; background-image: url("Boxman.png"); left: 200px; top: 200px; }
+</style>
+</head>
+<body>
+    <img id="box" src="Boxman.png">
+    <script>
+
+            'use strict';
+            
+            let boxtop = 200;
+            let boxleft = 200;
+            document.getElementById("box").style.top = boxtop + "px";
+            
+            document.addEventListener('keydown', (event) => {
+              const keyName = event.key;
+              console.log(keyName)
+             if(keyName === "ArrowDown"){boxtop += 10;}
+             if(keyName === "ArrowUp") {boxtop -= 10;}
+             if(keyName === "ArrowRight") {boxleft += 10;}
+             if(keyName === "ArrowLeft") {boxleft -= 10;}
+            
+                 document.getElementById("box").style.top = boxtop + "px";
+                 document.getElementById("box").style.left = boxleft + "px";
+             
+            });
+            
+            </script>
+</body>
+</html>
